@@ -1,44 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-html {
-  scroll-behavior: smooth;
+@theme {
+  --color-ink: #0e1420;      
+  --color-surface: #161f30;  
+  --color-border: #232e42; 
+  --color-text: #e9edf5;     
+  --color-muted: #8b96ac;    
+  --color-amber: #f2a65a;    
+  --color-signal: #3ecf8e;  
+
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-manrope);
+  --font-mono-custom: var(--font-jbmono);
 }
 
 body {
-  background-color: #0e1420;
-  color: #e9edf5;
+  background-color: var(--color-ink);
+  color: var(--color-text);
 }
 
-/* Visible keyboard focus everywhere, not just default browser blue */
 :focus-visible {
-  outline: 2px solid #f2a65a;
+  outline: 2px solid var(--color-amber);
   outline-offset: 2px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* Circuit-trace connector used between build-log entries in the portfolio section */
-.trace-line {
-  position: relative;
-}
-.trace-line::before {
-  content: "";
-  position: absolute;
-  left: 11px;
-  top: 2.5rem;
-  bottom: -2.5rem;
-  width: 2px;
-  background: linear-gradient(to bottom, #f2a65a 0%, #232e42 100%);
-}
-.trace-line:last-child::before {
-  display: none;
 }

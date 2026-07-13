@@ -1,41 +1,36 @@
-# tiffany-brand-ke
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Local (Kenya, KES pricing) version of the personal brand site.
+## Getting Started
 
-## Run it
+First, run the development server:
 
 ```bash
-npm install
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-Then open http://localhost:3000
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Before you launch, edit `lib/site-config.ts`
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-Everything that's specific to you lives in that one file:
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-- `brand` — your display name / brand name
-- `whatsappNumber` — your real WhatsApp number, digits only, country code without `+` (e.g. `2547XXXXXXXX`)
-- `email` — your real contact email
-- `pricing` — these are placeholder numbers, adjust to what you're comfortable charging
-- `projects` — update statuses as things ship (e.g. Nexus Commerce → "Shipped" once it's live)
+## Learn More
 
-Everything else (components, layout, styling) reads from that file, so you
-only ever have one place to update content.
+To learn more about Next.js, take a look at the following resources:
 
-## Why this structure
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-`lib/site-config.ts` is deliberately separated from the components. When we
-build the international (USD) version next, it'll get its own copy of this
-file — same shape, different currency and no M-Pesa mention — while every
-component stays exactly the same. That's what makes the geolocation split
-clean later: the routing logic just decides which config to load, not which
-UI to render.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Next step
+## Deploy on Vercel
 
-Once this version looks right, we'll:
-1. Build the international version (same structure, USD pricing, Stripe instead of M-Pesa)
-2. Add Next.js middleware to detect visitor country and route KE → this version, everyone else → international version
-3. Add a manual "not in Kenya?" override link
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
