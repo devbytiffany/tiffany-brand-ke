@@ -1,6 +1,8 @@
 export const siteConfig = {
   brand: "TyffDevs",
   currency: "KES",
+  whatsappNumber: "254742649048", 
+  email: "wahitotiffaany@gmail.com",
 };
 
 export const services=[

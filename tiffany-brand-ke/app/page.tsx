@@ -4,6 +4,7 @@ import Process from "@/components/Process";
 import TechStack from "@/components/TechStack";
 import Pricing from "@/components/Pricing";
 import Story from "@/components/Story";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <TechStack />
       <Pricing />
       <Story />
+      <Contact/>
     </main>
   );
 }
