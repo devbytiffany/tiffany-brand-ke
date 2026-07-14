@@ -1,7 +1,14 @@
-export default function Home(){
-  return(
-    <main>
-      <h1>Tiffany</h1>
-    </main>
+import Nav from "@/components/Nav";
+import Hero from "@/components/Hero";
+
+export default function Home() {
+  return (
+    <>
+      <Nav />
+      <main>
+        <Hero/>
+      </main>
+    </>
   );
+
 }
