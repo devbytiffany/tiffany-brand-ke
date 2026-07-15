@@ -16,7 +16,9 @@ export default function Contact() {
 
     const subject = encodeURIComponent(`Project inquiry from ${name}`);
     const body = encodeURIComponent(`${message}\n\nFrom: ${name} (${email})`);
-    window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
+    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${siteConfig.email}&su=${subject}&body=${body}`;
+
+    window.open(gmailLink, "_blank");
   }
 
   return (
@@ -27,7 +29,7 @@ export default function Contact() {
       </p>
 
       
-      <a href={waLink}
+      <a  href={waLink}
         target="_blank"
         rel="noopener noreferrer"
         className="mt-8 inline-block rounded-full bg-amber px-6 py-3 text-sm font-medium text-ink hover:opacity-90"
